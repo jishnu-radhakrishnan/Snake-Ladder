@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class SnakeAndLadder {
+     //To roll a die
      public int dieroll()
      {
          Scanner a = new Scanner(System.in);
@@ -11,6 +12,7 @@ public class SnakeAndLadder {
          int i = die.nextInt(6) + 1;
          return i;
      }
+     //To get player position
      public int playerposition(){
          int player1=0;
          SnakeAndLadder SL = new SnakeAndLadder();
@@ -35,6 +37,7 @@ public class SnakeAndLadder {
          }
          return player1;
      }
+     //To make player movement
      public int positionmovement(){
          SnakeAndLadder pos = new SnakeAndLadder();
          int position=0;
