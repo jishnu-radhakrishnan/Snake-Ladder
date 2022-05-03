@@ -37,7 +37,7 @@ public class SnakeAndLadder {
          }
          return player1;
      }
-     //To make player movement
+     //To make player movement (*note:player movement above 100 restricted by command line 50)
      public int positionmovement(){
          SnakeAndLadder pos = new SnakeAndLadder();
          int position=0;
