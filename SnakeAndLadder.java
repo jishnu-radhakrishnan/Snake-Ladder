@@ -37,13 +37,15 @@ public class SnakeAndLadder {
          }
          return player1;
      }
-     //To make player movement
+     //To make player movement (*note:Number of die rolls added in command line 44,48 & 58)
      public int positionmovement(){
          SnakeAndLadder pos = new SnakeAndLadder();
          int position=0;
+         int count=0;
          for(int i=0;position<=100;i++){
              int x=pos.playerposition();
              position=position+x;
+             count++;
              if(position<=0){
                  position=0;
                  System.out.println("\t\tYou are in the starting position roll again");
@@ -53,6 +55,7 @@ public class SnakeAndLadder {
              }else
              System.out.println("\t\tYour current position ="+ position);
          }
+         System.out.println("Number of times die rolled ="+ count);
              return position;
      }
      public static void main(String[] args)
