@@ -35,11 +35,27 @@ public class SnakeAndLadder {
          }
          return player1;
      }
+     public int positionmovement(){
+         SnakeAndLadder pos = new SnakeAndLadder();
+         int position=0;
+         for(int i=0;position<=100;i++){
+             position=position+pos.playerposition();
+             if(position<=0){
+                 position=0;
+                 System.out.println("\t\tYou are in the starting position roll again");
+             }
+             System.out.println("\t\tYour current position ="+ position);
+         }
+             return position;
+     }
      public static void main(String[] args)
      {
-         SnakeAndLadder pos = new SnakeAndLadder();
+         SnakeAndLadder game = new SnakeAndLadder();
          System.out.println("\t\t*****Welcome To Snake And Ladder*****");
          System.out.println("\tThe Game begins with player at 0 position...");
-         System.out.println("\t\tYour current position ="+ pos.playerposition());
+         int win=game.positionmovement();
+         if(win==100) {
+             System.out.println("You Won");
+         }
      }
 }
