@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class SnakeAndLadder {
+    //To roll a die
      public int dieroll()
      {
          Scanner a = new Scanner(System.in);
@@ -11,6 +12,7 @@ public class SnakeAndLadder {
          int i = die.nextInt(6) + 1;
          return i;
      }
+     //To get player position
      public int playerposition(){
          int player1=0;
          SnakeAndLadder SL = new SnakeAndLadder();
@@ -35,15 +37,20 @@ public class SnakeAndLadder {
          }
          return player1;
      }
+     //To make player movement
      public int positionmovement(){
          SnakeAndLadder pos = new SnakeAndLadder();
          int position=0;
          for(int i=0;position<=100;i++){
-             position=position+pos.playerposition();
+             int x=pos.playerposition();
+             position=position+x;
              if(position<=0){
                  position=0;
                  System.out.println("\t\tYou are in the starting position roll again");
-             }
+             }else if(position>100){
+                 position=position-x;
+                 System.out.println("\t\tSorry!! Roll again to get exact value to reach finishing point");
+             }else
              System.out.println("\t\tYour current position ="+ position);
          }
              return position;
