@@ -58,7 +58,7 @@ public class SnakeAndLadder {
          System.out.println("\tThe Game begins with player at 0 position...");
          int win=game.positionmovement();
          if(win==100) {
-             System.out.println("You Won");
+             System.out.println("\n\n\t\tYou Won");
          }
      }
 }
